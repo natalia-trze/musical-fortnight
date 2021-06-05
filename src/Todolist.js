@@ -1,10 +1,3 @@
-/*export default function Todolist (props){
-
-return(
-    <h1>To do List.... here...{props.appTheme1}</h1>
-)
-}*/
-
 import Addtext from './Addtext'
 export default function Todolist(props) {
 
@@ -16,19 +9,11 @@ export default function Todolist(props) {
     return (
 
         <div>
+            <h1>hello...</h1>
             <Addtext />
         </div>
 
     )
-
-    /*<div class="add-buttons">
-        <form>
-          <button id="addNewTask" class="storage-button">Add task</button>
-          <input type="text" id="user-input" class="storage" placeholder="add a new to-do" />
-          <div id="popup"></div>
-        </form>
-      </div>*/
-
 
     
   }

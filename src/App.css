@@ -1,10 +1,21 @@
- .App {
-  text-align: center;
+.App {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   text-align: center;
 } 
-#Light-mode {
-  background-color: whitesmoke;
+.App ul {
+  list-style-type: none;
+}
+.user-theme {
+  font-size: 15px;
   font-style: italic;
-  color:#282c34
+  color: whitesmoke;
+}
+#Light-mode {
+  background-color: #ABB2BF;
 }
 #Custom-mode {
   background-color: salmon;
@@ -14,41 +25,37 @@
 }
 .App-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 40vh;
+  justify-content: space-around;
+  height: 10vh;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.Navbar ul {
-  display: flex;
-  list-style-type: none;
-  
+  color: whitesmoke;
 }
 .Main {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
   align-items: center;
-  justify-content: center;
   font-size: 30px;
-  color: white;
+  width: 60%;
+  height: 70vh;
+  color: whitesmoke;
 }
-
+.footer-container{
+  position: relative;
+ height: 10vh;
+}
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8vh;
   display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 20px;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  color: whitesmoke;
 }
 
 

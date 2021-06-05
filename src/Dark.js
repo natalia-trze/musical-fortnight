@@ -2,7 +2,7 @@ import Theme from "./Theme";
 
 export default function Dark (props){
 
-    return <h1>Welcome to Dark... {props.Theme[0].id} mode</h1>
+    return <p>Welcome to Dark... {props.Theme[0].id} mode</p>
 
 }
 

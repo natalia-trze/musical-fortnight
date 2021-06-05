@@ -28,11 +28,12 @@ export default function Addtext() {
     <div className="App">
       
       <button id="addNewTask" onClick={function(){handleClick(userInput)}}>Add task</button>
-      <input type="text" id="user-input" onChange={onChange}  defaultValue="text" placeholder="add a new to-do" />
+      <input type="text" id="user-input" onChange={onChange}  defaultValue="add item here" placeholder="add a new to-do" />
+      <ul>
       {exampleArray.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
-      
+      </ul>
     </div>
   );
 }

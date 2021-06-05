@@ -33,9 +33,9 @@ function App() {
     //console.log(appTheme1)
   };
 
-
+ 
   return (
-    <div className="App">
+    <div className="App"  id={appTheme + "-mode"}>
       <header className="App-header">
         <ButtonList buttons={apps} callback={changeAppTheme}/>
         <SignInButton />
@@ -51,10 +51,7 @@ function App() {
           }[appTheme1]
         }
       </div>
-
-
-
-
+      
       </header>
       <div className="Main">
         <Main userName="Stranger" />

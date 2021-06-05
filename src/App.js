@@ -9,8 +9,13 @@ import Dark from './Dark';
 import Light from './Light';
 import Custom from './Custom';
 import { useState } from "react";
+import Todolist from './Todolist';
+import Calendar from './Calendar';
+import Home from './Home';
+
 
 const apps = ["Dark", "Light", "Custom"];
+const menuButtons = ["Home", "Todolist", "Calendar"];
 
 
 function App() {
@@ -18,24 +23,48 @@ function App() {
   const changeAppTheme = (value) => {
     console.log(value)
     setAppTheme(value);
-    
+    //console.log(appTheme)
   };
+
+  const [appTheme1, setAppTheme1] = useState(menuButtons[1]);
+  const changeAppTheme1 = (value) => {
+    console.log(value)
+    setAppTheme1(value);
+    //console.log(appTheme1)
+  };
+
+
   return (
     <div className="App">
       <header className="App-header">
         <ButtonList buttons={apps} callback={changeAppTheme}/>
         <SignInButton />
-        <NavBar />
+
+        <NavBar navName={menuButtons} callback1={changeAppTheme1} />
+
+        <div id={appTheme1 + "-mode"}>
+        {
+          {
+            "Home": <Home Theme={Theme} />,
+            Todolist: <Todolist Theme={Theme} />,
+            Calendar: <Calendar Theme={Theme} />,
+          }[appTheme1]
+        }
+      </div>
+
+
+
+
       </header>
       <div className="Main">
         <Main userName="Stranger" />
         <div id={appTheme + "-mode"}>
         {
           {
-            "dark": <Dark appTheme={appTheme} />,
-            light: <Light appTheme={appTheme} />,
-            custom: <Custom appTheme={appTheme} />,
-          }["dark"]
+            "Dark": <Dark Theme={Theme} />,
+            Light: <Light Theme={Theme} />,
+            Custom: <Custom Theme={Theme} />,
+          }[appTheme]
         }
       </div>
       </div>

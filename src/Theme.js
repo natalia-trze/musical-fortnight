@@ -1,6 +1,4 @@
-export default function Theme() {
-    return (
-    [
+export default [
         {
             id: 1,
             text: 'Dark',
@@ -15,5 +13,4 @@ export default function Theme() {
             text: 'Custom',
 
         }
-    ])
-};
+    ]

@@ -19,14 +19,14 @@ const menuButtons = ["Home", "Todolist", "Calendar"];
 
 
 function App() {
-  const [appTheme, setAppTheme] = useState(apps[1]);
+  const [appTheme, setAppTheme] = useState(apps[0]);
   const changeAppTheme = (value) => {
     console.log(value)
     setAppTheme(value);
     //console.log(appTheme)
   };
 
-  const [appTheme1, setAppTheme1] = useState(menuButtons[1]);
+  const [appTheme1, setAppTheme1] = useState(menuButtons[0]);
   const changeAppTheme1 = (value) => {
     console.log(value)
     setAppTheme1(value);

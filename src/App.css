@@ -3,6 +3,8 @@
 } 
 #Light-mode {
   background-color: whitesmoke;
+  font-style: italic;
+  color:#282c34
 }
 #Custom-mode {
   background-color: salmon;

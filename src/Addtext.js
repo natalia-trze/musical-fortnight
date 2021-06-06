@@ -1,16 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Addtext() {
-  let [userInput, setUserInput] = useState(0);
-  let [exampleArray, setExampleArray] = useState([]);
+  const initialState = JSON.parse(localStorage.getItem("data")) || [];  
+  let [userInput, setUserInput] = useState([]);
+  let [exampleArray, setExampleArray] = useState(initialState);
   //const handlePlus = () => setUserInput((p) => p + 1);
   //const handleMinus = () => setUserInput((p) => p - 1);
-  let handleArrayAdd = () => setExampleArray((p) => [...p, userInput]);
-  console.log(exampleArray)
+  //let handleArrayAdd = () => setExampleArray((p) => [...p, userInput]);
+  //console.log(exampleArray)
 
   //let userInput=""
 
   //const handleClick = (userInput) => alert('your Text ...'+userInput);
   const handleClick = () => setExampleArray((p) => [...p, userInput]);
+
+  const deleteTask = (i)=>{
+
+    const newExampleArray = [...exampleArray]
+    console.log(newExampleArray)
+    let newExampleArray2 = newExampleArray.slice(0,i)
+    console.log(newExampleArray2)
+    console.log(i)
+    setExampleArray(newExampleArray2)
+
+  
+    }
+
+
+    /* 
+    
+      const newExampleArray = [...exampleArray]
+
+    let newExampleArray2 = newExampleArray.filter((id)=>{
+        console.log(newExampleArray2)
+    
+    
+    */
+
+  //}
 
   const onChange = (event) => {
     event.preventDefault();
@@ -18,6 +44,10 @@ export default function Addtext() {
     userInput = event.target.value;
     console.log(userInput)
 }
+
+    useEffect(() => {
+     localStorage.setItem("data", JSON.stringify(exampleArray));
+     }, [exampleArray]);
 
 /*    <button onClick={handlePlus}>+</button>
       <button onClick={handleMinus}>-</button>
@@ -31,7 +61,12 @@ export default function Addtext() {
       <input type="text" id="user-input" onChange={onChange}  defaultValue="add item here" placeholder="add a new to-do" />
       <ul>
       {exampleArray.map((item, i) => (
-        <li key={i}>{item}</li>
+          
+        <li key={i}>
+            <input  type ="checkbox" className="check" />
+            {item}
+            <button key={i} className="delete-item" onClick={function(){deleteTask(i)} } >&#10006;</button>
+        </li>
       ))}
       </ul>
     </div>

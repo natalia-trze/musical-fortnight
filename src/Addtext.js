@@ -13,30 +13,13 @@ export default function Addtext() {
   //const handleClick = (userInput) => alert('your Text ...'+userInput);
   const handleClick = () => setExampleArray((p) => [...p, userInput]);
 
-  const deleteTask = (i)=>{
-
-    const newExampleArray = [...exampleArray]
-    console.log(newExampleArray)
-    let newExampleArray2 = newExampleArray.slice(0,i)
-    console.log(newExampleArray2)
-    console.log(i)
-    setExampleArray(newExampleArray2)
-
-  
-    }
-
-
-    /* 
-    
-      const newExampleArray = [...exampleArray]
-
-    let newExampleArray2 = newExampleArray.filter((id)=>{
-        console.log(newExampleArray2)
-    
-    
-    */
-
-  //}
+  const deleteTask = (i) => {
+    setExampleArray(function (previous) {
+      const newList = [...previous];
+      newList.splice(i, 1);
+      return newList;
+    });
+  };
 
   const onChange = (event) => {
     event.preventDefault();

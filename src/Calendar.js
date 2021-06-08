@@ -1,13 +1,22 @@
-export default function Calendar(props){
+import weekdays from './weekdays';
+import { useEffect, useState } from "react";
 
-    return (
+console.log(weekdays)
 
-        <h1>This is a Calendar ... here ...{props.appTheme1}</h1>
+export default function Calendar(props) {
+    const [userInput, setUserInput] = useState([]);
 
+    const onChange = (event) => {
+        const newValue = event.target.value;
+        setUserInput(newValue);
+    }
 
-
-    )
-
-
-
-}
+    return  (
+        weekdays.map((day) => 
+          <table className="calendar" key={day.id}>
+            <tr>{day.name}</tr>
+            <tr>{day.date.toDateString()}</tr>
+            <td><input type="text" id="user-input" onChange={onChange} /><button id="task" >&#43;</button></td>
+          </table>
+        ))};
+    

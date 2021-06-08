@@ -8,12 +8,12 @@ import Theme from './Theme';
 import Dark from './Dark';
 import Light from './Light';
 import Custom from './Custom';
-import { useState } from "react";
-import Todolist from './Todolist';
+import { useState , useEffect} from "react";
 import Calendar from './Calendar';
 import Home from './Home';
 import Addtext from './Addtext';
-
+import weekdays from './weekdays';
+import DateTime from './datetime';
 
 const apps = ["Dark", "Light", "Custom"];
 const menuButtons = ["Home", "Todolist", "Calendar"];
@@ -43,23 +43,23 @@ function App() {
             }[appTheme]
           }
         </div>
+        <Main userName="Luis" />
       <header className="App-header">
-    
+        <DateTime />
         <ButtonList buttons={apps} callback={changeAppTheme} />
         <SignInButton />
       </header>
-
+      
       <div className="Main">
-        <Main userName="Luis" />
-        <NavBar navName={menuButtons} callback1={changeAppTheme1} />
         
+        <NavBar navName={menuButtons} callback1={changeAppTheme1} />
 
         <div className="app-container" id={appTheme1 + "-mode"}>
           {
             {
               "Home": <Home Theme={Theme} />,
               Todolist: <Addtext Theme={Theme} />, 
-              Calendar: <Calendar Theme={Theme} />,
+              Calendar: <Calendar Theme={Theme} weekdays={weekdays}/>,
             }[appTheme1]
           }
         </div>

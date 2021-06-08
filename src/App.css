@@ -7,7 +7,34 @@
    text-align: center;
 } 
 .App ul {
-  list-style-type: none;
+   list-style-type: none;  
+   display: flex;
+   flex-direction: column;
+   width: 30vw;
+}
+.App ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4vh;
+  font-size: 20px;
+}
+.app-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 3vw;
+}
+.Navbar button {
+  margin-top: 3vh;
+}
+input[type=checkbox] {
+  transform: scale(1.6);
+ 
 }
 .user-theme {
   font-size: 15px;
@@ -34,29 +61,54 @@
 }
 .Main {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+}
+
+.Todolist-mode {
+  display: flex;
+}
+#addNewTask{
+  height: 4vh;
+  font-weight: bold;
+}
+#user-input {
+  height: 3.2vh;
+  margin-left: 1vh;
+  width: 30vw;
+}
+
+/* CALENADAR */
+.calendar {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-self: center;
-  align-items: center;
-  font-size: 30px;
-  width: 60%;
-  height: 70vh;
-  color: whitesmoke;
+  justify-content: space-between;
+  font-size: 15px;
 }
+.calendar tr, .calendar td {
+  padding: 8px;
+}
+
+/* FOOTER */
 .footer-container{
   position: relative;
- height: 10vh;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 8vh;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  color: whitesmoke;
-}
-
-
-
+  height: 10vh;
+ }
+ .footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 8vh;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: center;
+   color: whitesmoke;
+ }
+ .footer img {
+   margin-left: 3vw;
+ }

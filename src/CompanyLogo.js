@@ -1,3 +1,3 @@
-export default function CompanyLogo ({source, size}) {
-    return <img src={source} width={size} />
+export default function CompanyLogo ({source, height, width}) {
+    return <img src={source} height={height} width={width} />
 };

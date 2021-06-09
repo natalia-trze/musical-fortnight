@@ -2,7 +2,7 @@ export default function Home(props){
 
     return(
 
-        <h1>this is Home .... goes here{props.appTheme1}</h1>
+        <h1>HOME PAGE WITH SOME NEWS? {props.appTheme1}</h1>
 
 
 

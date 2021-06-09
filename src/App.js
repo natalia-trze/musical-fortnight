@@ -8,7 +8,7 @@ import Theme from './Theme';
 import Dark from './Dark';
 import Light from './Light';
 import Custom from './Custom';
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import Calendar from './Calendar';
 import Home from './Home';
 import Addtext from './Addtext';
@@ -33,42 +33,41 @@ function App() {
   };
 
   return (
-    <div className="App" id={appTheme + "-mode"}>
+    <div className="app" id={appTheme + "-mode"}>
       <div className="user-theme" id={appTheme + "-mode"}>
+        {
           {
-            {
-              "Dark": <Dark Theme={Theme} />,
-              Light: <Light Theme={Theme} />,
-              Custom: <Custom Theme={Theme} />,
-            }[appTheme]
-          }
-        </div>
-        <Main userName="Luis" />
-      <header className="App-header">
+            "Dark": <Dark Theme={Theme} />,
+            Light: <Light Theme={Theme} />,
+            Custom: <Custom Theme={Theme} />,
+          }[appTheme]
+        }
         <DateTime />
-        <ButtonList buttons={apps} callback={changeAppTheme} />
+      </div>
+
+      <header className="app-header">
         <SignInButton />
+        <Main userName="..." />
       </header>
       
-      <div className="Main">
-        
-        <NavBar navName={menuButtons} callback1={changeAppTheme1} />
-
-        <div className="app-container" id={appTheme1 + "-mode"}>
+      <ButtonList buttons={apps} callback={changeAppTheme} />
+      <div className="main-box">
+      <NavBar navName={menuButtons} callback1={changeAppTheme1} />
+      
+      <div className="app-container" id={appTheme1 + "-mode"}>
+        {
           {
-            {
-              "Home": <Home Theme={Theme} />,
-              Todolist: <Addtext Theme={Theme} />, 
-              Calendar: <Calendar Theme={Theme} weekdays={weekdays}/>,
-            }[appTheme1]
-          }
-        </div>
-
+            "Home": <Home Theme={Theme} />,
+            Todolist: <Addtext Theme={Theme} />,
+            Calendar: <Calendar Theme={Theme} weekdays={weekdays} />,
+          }[appTheme1]
+        }
+      </div>
       </div>
       <footer className="footer-container">
         <Footer />
       </footer>
-    </div>
+    </div >
   );
 }
 

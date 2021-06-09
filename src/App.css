@@ -4,9 +4,12 @@
    flex-direction: column;
    justify-content: center;
    height: 100%;
-   width: 100%;
+   width: 75%;
    text-align: center;
    color: whitesmoke;
+   margin: auto;
+   border: 1px solid;
+   box-shadow:20px 20px 10px grey;
 }
 button {
   color: #282c34;
@@ -70,7 +73,7 @@ button {
   background-color: #ABB2BF;
 }
 #Custom-mode {
-  background-color: salmon;
+  background-color: #cc665bcb;
 }
 #Dark-mode {
   background-color: #282c34;
@@ -87,7 +90,8 @@ button {
 #Todolist-mode {
   display: flex;
   justify-content: flex-end;
-  width: 70%;
+  align-items: flex-end;
+  width: 80%;
   padding: 0;
 }
 .addText {

@@ -13,7 +13,7 @@ export default [
         {
             id: 3,
             text: 'Custom',
-            color: 'salmon'
+            color: '#cc665bcb'
 
         }
         

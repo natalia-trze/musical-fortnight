@@ -5,7 +5,8 @@ console.log(weekdays)
 
 export default function Calendar(props) {
     const [userInput, setUserInput] = useState([]);
-
+    
+/* how to set up dates for different days - with useState? */ 
     const onChange = (event) => {
         const newValue = event.target.value;
         setUserInput(newValue);

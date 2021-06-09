@@ -11,7 +11,10 @@ export default function DateTime () {
     }, []);
 
     return (
-        <h4>{`${dateTime.toLocaleDateString()} ${dateTime.toLocaleTimeString()}`}</h4>
+        <div className="clock">
+            <p>{`${dateTime.toLocaleDateString()}`}</p>
+            <p>{`${dateTime.toLocaleTimeString()}`}</p>
+        </div>
     );
 
 };

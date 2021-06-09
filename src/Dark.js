@@ -1,8 +1,7 @@
-import Theme from "./Theme";
 
 export default function Dark (props){
 
-    return <p>Welcome to Dark... {props.Theme[0].id} mode</p>
+    return <p>Dark {props.appTheme} mode</p>
 
 }
 

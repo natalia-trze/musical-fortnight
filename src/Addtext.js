@@ -24,7 +24,7 @@ export default function Addtext() {
 
   const onChange = (event) => {
     event.preventDefault();
-    setUserInput(() => event.target.value)
+    setUserInput(() => event.target.value);
 }
   
    const emptyInput = (event) => {

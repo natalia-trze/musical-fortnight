@@ -14,9 +14,11 @@ import Home from './Home';
 import Addtext from './Addtext';
 import weekdays from './weekdays';
 import DateTime from './datetime';
+import Monthly from './Monthly';
+
 
 const apps = ["Dark", "Light", "Custom"];
-const menuButtons = ["Home", "Todolist", "Calendar"];
+const menuButtons = ["Home", "Todolist", "Calendar", "Monthly"];
 
 
 function App() {
@@ -60,6 +62,7 @@ function App() {
             "Home": <Home Theme={Theme} />,
             Todolist: <Addtext Theme={Theme} />,
             Calendar: <Calendar Theme={Theme} weekdays={weekdays} />,
+            Monthly: <Monthly Theme={Theme} />,
           }[appTheme1]
         }
       </div>

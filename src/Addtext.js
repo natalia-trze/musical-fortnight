@@ -4,7 +4,7 @@ export default function Addtext() {
   const [userInput, setUserInput] = useState([]);
   const [addDate, setAddDate] = useState([]);
   const [exampleArray, setExampleArray] = useState(initialState);
-  const handleClick = () => setExampleArray((p) => [...p, [userInput, addDate]]);
+  const handleClick = () => setExampleArray((p) => [...p, [userInput, addDate, isEditing]]);
   const [isEditing, setEditing] = useState(false);
 /*working on editing feature + filter by date */
 

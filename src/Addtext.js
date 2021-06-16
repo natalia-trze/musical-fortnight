@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import Calendar from "./Calendar";
+
 export default function Addtext() {
   const initialState = JSON.parse(localStorage.getItem("data")) || [{}];  
-  const [userInput, setUserInput] = useState([]);
-  const [addDate, setAddDate] = useState([]);
+  const [userInput, setUserInput] = useState();
+  const [addDate, setAddDate] = useState();
   const [exampleArray, setExampleArray] = useState(initialState);
   const handleClick = () => setExampleArray((p) => [...p, [userInput, addDate, isEditing]]);
   const [isEditing, setEditing] = useState(false);

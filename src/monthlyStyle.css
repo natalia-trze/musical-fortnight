@@ -1,0 +1,26 @@
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    height: 100px;
+    width: 100px;
+    outline: 0.1px solid #eee9;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+  .today {
+    outline: 5px solid red;
+    z-index: 99;
+  }
+  .notCurrentMonth {
+    background: lightgray;
+  }
+  .color-bar {
+    z-index: 999;
+    background: #ffdc00;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+  }

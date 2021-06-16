@@ -67,6 +67,8 @@ font-size: 115%;
 padding: 1.5em 0;
 border-bottom: 1px solid #282c34;
 color: #282c34;
+
+
 }
 .calendar .header .icon {
 cursor: pointer;
@@ -103,6 +105,8 @@ transition: 0.25s ease-out;
 .calendar .body .cell:hover {
 background: whitesmoke;
 transition: 0.5s ease-out;
+height: fit-content;
+/*transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .calendar .body .selected {
 border-left: 10px solid transparent;
@@ -130,13 +134,17 @@ font-weight: 700;
 visibility:hidden;
 }
 .calendar .body .disabled {
-color: whitesmoke;
+/*color: whitesmoke;*/
+color: #7f8aa1;
+background-color: #7f8aa1;
+
 pointer-events: none;
 }
 .calendar .body .cell .bg {
 font-weight: 700;
 line-height: 1;
-color: #282c34;
+/*color: #282c34;*/
+color: #79859c;
 opacity: 0;
 font-size: 3em;
 position: absolute;
@@ -154,3 +162,9 @@ flex-grow: 0;
 flex-basis: calc(100%/7);
 width: calc(100%/7);
 }
+
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    height: auto;
+  }
+

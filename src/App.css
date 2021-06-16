@@ -164,3 +164,6 @@ input[type=checkbox] {
  .footer img {
    margin-left: 3vw;
  }
+ .completed {
+  text-decoration: line-through;
+}

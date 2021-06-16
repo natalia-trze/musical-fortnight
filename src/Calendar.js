@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dateFns, {isSameDay} from "date-fns";
 import "./Calendar.css";
-import Addtext  from "./Addtext";
+
 
 console.clear()
 const Calendar = () => {
@@ -76,7 +76,8 @@ const Calendar = () => {
                   <span style={{color:"#282c34" }} >{
                      calendarEvents
                         .filter(event => {
-                           return ( dateFns.isSameDay(day,event[1]) )
+                           return ( dateFns.isSameDay(day, event[day]))
+
                         })
                         .map((eventsToday)=>{
                            return eventsToday[0]
@@ -86,7 +87,7 @@ const Calendar = () => {
                            //   )
                         })
                   }  
-                  
+                  console.log(calendarEvents)
                </span>
             </div>
             );

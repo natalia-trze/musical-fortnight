@@ -7,10 +7,11 @@ import Calendar from './Calendar';
 import Home from './Home';
 import Addtext from './Addtext';
 import DateTime from './datetime';
+import Todolistapp from './todolist/Todolistapp';
 
 
 const apps = ["Dark", "Light", "Custom"];
-const menuButtons = ["Home", "Todolist", "Calendar"];
+const menuButtons = ["Home", "Todolist", "Calendar", "Todolistapp"];
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             "Home":   <Home />,
             Todolist: <Addtext />,
             Calendar: <Calendar/>,
+            Todolistapp: <Todolistapp/>
           }[appSwitch]
         }
       </div>

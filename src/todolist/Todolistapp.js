@@ -1,4 +1,5 @@
-import '../App.css';
+//import '../App.css';
+import './Todolistapp.css';
 import Headertodo from './Headertodo';
 import Tasks from './Tasks';
 import { useState, useEffect } from "react"
@@ -46,8 +47,26 @@ const removeCompleted = () => {
 }
 
 
+//Edit
+//const [divText, setDivText] = useState("hello")
+
+
+const saveEditedText = (id,aaa) => {
+
+  //setLuis(e.target.value)
+
+  setTasks(
+    tasks.map((t) =>
+    t.id === id ? {...t, text: aaa } : t 
+    )
+  )
+
+
+}
+
+
   return (
-    <div className="App">
+    <div className="app-todo">
     
       <Headertodo 
       title="To - Do List" 
@@ -57,7 +76,10 @@ const removeCompleted = () => {
       />
       {showAddTask && <Addtask onAdd={addTask} 
       />} 
-      {tasks.length > 0 ? (<Tasks tasks={tasks} onToggle={toggleCompleted} onDelete={deleteTask} removeCompleted={removeCompleted} />)
+      {tasks.length > 0 ? (<Tasks tasks={tasks} 
+      onToggle={toggleCompleted} onDelete={deleteTask} 
+      removeCompleted={removeCompleted}
+      onEdit={saveEditedText} />)
       : 
       ("") }
 

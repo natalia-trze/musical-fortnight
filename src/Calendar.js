@@ -63,13 +63,13 @@ const Calendar = () => {
       let days = [];
       let day = startDate;
 
-      console.log("OYOY day=" + day) 
+      /*console.log("OYOY day=" + day) 
       console.log("currentDate=" + currentDate)
       console.log("monthStart=" + monthStart)
       console.log("monthEnd=" + monthEnd)
       console.log("startDate=" + startDate)
-      console.log("endDate=" + endDate)
-      
+      console.log("endDate=" + endDate)*/
+      //<span className="number">{formattedDate}</span> --taken it from line 92 above spanclassname bg
    
       let formattedDate = "";
       let formattedDate2 = "";
@@ -87,61 +87,24 @@ const Calendar = () => {
                   className={`column cell ${!isSameMonth(day, monthStart)? "disabled" : isSameDay(day, selectedDate) 
                   ? "selected" : "" }`} 
                   key={day} 
-                  //onClick={() => onDateClick((day))} onDoubleClick={()=> console.log("Hello")}
+                  onClick={() => onDateClick((day))} onDoubleClick={()=> console.log("Hello")}
                > 
-                  <span className="number">{formattedDate}</span>
+                  
                   <span className="bg">{formattedDate}</span>
-                  <span style={{color:"#282c34" }} >{
+                  <div className="tasks" style={{color:"#282c34" }} >{
                      calendarEvents
                         .filter((event,i) => {
-
-                           if(getDayOfYear(parseISO(event[1]))===getDayOfYear(day))
-                           {console.log("...aqui..."+event[i]) }else{
-                              //console.log("no..este"+getDayOfYear(day))
-                              //console.log("no..contra este"+getDayOfYear(parseISO(event[i])))
-                              console.log(parseISO(event[1],1))
-
-                           
-                           }
-                        
-                           
-                           //console.log("this is the event we wait for..."+parseISO(event[1]))
-                           //console.log("this is newdate..."+ new Date(day.getFullYear(), day.getMonth(), day.getDay()))
-                           //console.log("this is the day..."+getDayOfYear(day))
-                           //console.log("this is the  formattedDate..."+ formattedDate2)
-                           //if(getDayOfYear(parseISO(event[1]))===getDayOfYear(day)){console.log("this match !!!!!!!!!!")}
-                           //else {console.log("NO")}
-
-                           let luis2 = new Date(day.getFullYear(), day.getMonth(), day.getDay())
-                           let luis3 = parseISO(event[1])
-
-                           let luis4 = new Date(luis3.getFullYear(),luis3.getMonth(),luis3.getDate()) 
-
-                            
-                           //new Date(parseISO(event[0]).getFullYear(), parseISO(event[0]).getMonth(), parseISO(event[0]).getDay())))
-
-                           //console.log(new Date(luis3.getFullYear(),luis3.getMonth(),luis3.getDate()))
-
-                           //let luis6 = (isSameDay(luis4, luis2 ))
-                           //let luis6 = (isSameDay(new Date(2014, 8, 4), new Date(2014, 8, 4)))
-
-                           //return (isSameDay(luis4, luis2 ))
-
-                           //console.log(luis6)
-                           //console.log(luis4)
-                           //console.log(luis2)
-                        
+                           //return getDayOfYear(parseISO(event[1]))===getDayOfYear(day)
+                           return getDayOfYear(parseISO(event.day))===getDayOfYear(day)
+                           //console.log("date luis here..."+event.addDate)
                         })
-                        .map((eventsToday)=>{
-                           return eventsToday[0]
-                           //console.log('this is luis on ourdate...'+ourDate)
-                           //eventsToday.map((event) => 
-                           //   {return event[0]} 
-                           //   )
+                        .map((eventsToday,i)=>{
+                           //return (<li key={i}>{eventsToday[0]}</li>)
+                           return (<li key={i}>{eventsToday.text}</li>)
                         })
                   }  
                   
-               </span>
+               </div>
             </div>
             );
          
@@ -156,18 +119,18 @@ const Calendar = () => {
    }
    const nextMonth = () => {
       const _nextMonth = addMonths(currentDate, 1)
-      console.log({_nextMonth})
+      //console.log({_nextMonth})
       setCurrentDate(_nextMonth);
    };
    const prevMonth = () => {
       const _prevMonth = subMonths(currentDate, 1)
-      console.log({_prevMonth})
+      //console.log({_prevMonth})
       setCurrentDate(_prevMonth);
    };
    const onDateClick = day => {
       setSelectedDate(day);
    }
-   useEffect(()=>console.log({currentDate}),[currentDate])
+   //useEffect(()=>console.log({currentDate}),[currentDate])
    return (
       <div className="calendar">
       <div>{header(currentDate)}</div>

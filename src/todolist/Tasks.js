@@ -1,10 +1,11 @@
 import Task from "./Task";
 
-const Tasks = ({tasks, onDelete, onToggle, removeCompleted}) => {
+const Tasks = ({tasks, onDelete, onToggle, removeCompleted, onEdit}) => {
     
     return (
         <>
             {tasks
+            
             .sort((a, b) => {
                 a = parseInt(a.day.split('-').reverse().join('-'));
                 b = parseInt(b.day.split('-').reverse().join('-'));
@@ -16,12 +17,16 @@ const Tasks = ({tasks, onDelete, onToggle, removeCompleted}) => {
                     return 0;
                 }
             })
+
+
             .map((task) => 
                 <Task 
                 key={task.id} 
                 task={task} 
                 onToggle={onToggle} 
-                onDelete={onDelete} 
+                onDelete={onDelete}
+                onEdit={onEdit}
+                //onToggle={toggleCompleted} 
             />)
             }
 
@@ -31,4 +36,16 @@ const Tasks = ({tasks, onDelete, onToggle, removeCompleted}) => {
 }
 
 export default Tasks
+
+/*.sort((a, b) => {
+                a = parseInt(a.day.split('-').reverse().join('-'));
+                b = parseInt(b.day.split('-').reverse().join('-'));
+                if (a < b) {
+                    return -1;
+                } else if (a > b) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })*/
 

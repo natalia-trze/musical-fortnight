@@ -1,0 +1,48 @@
+ .app-todo{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    width: 50vw;
+    margin-left: 40vh;
+    margin-top: 10vh;
+    color: whitesmoke;  
+    border: 1px solid;
+    /*box-shadow:15px 15px 5px grey;*/
+    background-color: #282c34;
+
+ }
+
+ .task{
+     display:flex;
+     flex-wrap:wrap;
+     flex-direction:row;
+     justify-content: space-around;
+ }
+
+ .button{
+    padding: 2px 20px;
+    background-color: rgba(0, 0, 0, 0.283);
+    /*border-color: whitesmoke;*/
+    border-radius: 7px;
+    height: 3vh;
+    width: 4vw;
+    margin-bottom: 1vh;
+  }
+
+  .add-task{
+
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items: center;
+
+  }
+
+  form{
+
+    margin: 15px;
+
+
+  }

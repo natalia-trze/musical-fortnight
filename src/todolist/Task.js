@@ -21,14 +21,14 @@ const Task = ({task, onDelete, onToggle, onEdit}) => {
             <p><FaTimes style={{color: "orange", cursor: "pointer"}} onClick={() => onDelete(task.id)} /></p>
         
             <div  contentEditable
-            onInput={event => {
-                const aaa = setDivText(event.target.innerText)
-                onEdit(task.id,aaa)
-
+            onKeyUp={event => {
+                console.log("hello")
+                onEdit(task.id,event.currentTarget.textContent)
+                console.log(event.target.innerText)
             } } 
              >{task.text}</div>
 
-             <p>{divText}</p>
+             
 
             
             
@@ -57,5 +57,7 @@ export default Task
 <h3 contentEditable={isEditing} onDoubleClick={handleEditing}>{task.text}</h3>
 
 <div  contentEditable="true" onClick={()=> onEdit(task.id)} >{task.text}</div>
+
+<p>{divText}</p>
 
 */

@@ -52,6 +52,8 @@ const removeCompleted = () => {
 
 
 const saveEditedText = (id,aaa) => {
+  console.log(id,aaa)
+  
 
   //setLuis(e.target.value)
 

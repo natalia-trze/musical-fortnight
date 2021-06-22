@@ -5,8 +5,6 @@ import Tasks from './Tasks';
 import { useState, useEffect } from "react"
 import Addtask from './Addtask';
 
-
-
 function Todolistapp() {
   const initialState = JSON.parse(localStorage.getItem("data")) || [{}];
   const [showAddTask, setShowAddTask] = useState(false)
@@ -16,7 +14,6 @@ function Todolistapp() {
     localStorage.setItem("data", JSON.stringify(tasks));
     }, [tasks]);
 
-
 //add task
 const addTask = (task) => {
   const id = Math.floor(Math.random()* 10000) + 1
@@ -25,12 +22,10 @@ const addTask = (task) => {
 }
 
 // detele task 
-
 const deleteTask = (id) => {
   setTasks(tasks.filter((task)=> task.id !== id))
 }
 // toggle completed
-
 const toggleCompleted = (id) => {
   setTasks(
     tasks.map((task) =>
@@ -46,24 +41,15 @@ const removeCompleted = () => {
   setTasks(filteredTasks);
 }
 
-
 //Edit
-//const [divText, setDivText] = useState("hello")
-
-
 const saveEditedText = (id,aaa) => {
   console.log(id,aaa)
-  
-
-  //setLuis(e.target.value)
 
   setTasks(
     tasks.map((t) =>
     t.id === id ? {...t, text: aaa } : t 
     )
   )
-
-
 }
 
 

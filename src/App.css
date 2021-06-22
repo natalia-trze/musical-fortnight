@@ -1,170 +1,101 @@
-/* app theme buttons */
 .app {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   height: 100%;
-   width: 85%;
-   text-align: center;
-   color: whitesmoke;
-   margin: auto;
-   border: 1px solid;
-   box-shadow:20px 20px 10px grey;
-   
+   align-items: center;
+   width: 100%;
+   margin: 0;
+   color: #836E66;
 }
-button {
-  color: #282c34;
-} 
-.app ul {
-   list-style-type: none;  
-   display: flex;
-   flex-direction: column;
-   width: 30vw;
-}
-.main-box {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 10vh;
-}
-/*  SIGN IN BUTTON AND TIME*/
-.app-header {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 1vw;
-  height: 5vh;
-  font-size: 15px;
-}
-
-/* BUTTON FOR APPLICATION CHANGE*/
-.Navbar {
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-  padding: 1vw;
-}
-.Navbar button {
-  margin-top: 3vh;
-}
-.button-list {
+.Navbar{
   display: flex;
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  height: 8vh;
 }
-.button-list button {
-  height: 5vh;
-  width: 7vw;
-  margin-left: 0.5vw;
-  opacity: 0.8;
+.Navbar button {
+    width: 100px;
+    height: 35px;
+    font-weight: bold;
+    border: 1px solid #3C3939;
+    text-align: center;
+    border-radius: 6px;
+    margin-right: 2vw; 
 }
-
-/* THEMES */
+.button-list button{
+  width: 100px;
+  height: 20px;
+  border: 1px solid #3C3939;
+  text-align: center;
+  border-radius: 6px;
+  margin-right: 2px;
+}
 .user-theme {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 4vw 0 4vw;
-  font-size: 13px;
-  font-style: italic;
-  color: whitesmoke;
+  align-items: center;
+  width: 100%;
+  margin: 0 5px 0 5px;
+}
+#Calendar-mode, #Todolistapp-mode, #Home-mode {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  width: 700px;
 }
 #Light-mode {
-  background-color: #ABB2BF;
+  background-color: #F5F3F1;
+}
+#Light-mode .task {
+  background-color: #9C9592;
+}
+#Light-mode .app-todo{
+  color: #3C3939;
 }
 #Custom-mode {
-  background-color: #cc665bcb;
+  background-color: #9C928D;
+}
+#Custom-mode .task {
+  background-color: #C694A8;
+}
+#Custom-mode .calendar .body .disabled {
+  background-color: #C694A8;
 }
 #Dark-mode {
-  background-color: #282c34;
+  background-color: #3C3939;
 }
-/*HOME CONTAINER*/
-#Home-mode {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  padding: 0;
-}
-
-/*TO DO APP CONTAINER*/
-#Todolist-mode {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 80%;
-  padding: 0;
-}
-.addText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-bottom: 3vh;
-}
-input[type=checkbox] {
-  transform: scale(1.6);
-}
-#addNewTask{
-  height: 4vh;
-  width: 8vw;
-}
-#user-input {
-  height: 3.2vh;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  width: 30vw;
-}
-.addText ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.addText ul li {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 0.4vh;
-  font-size: 18px;
-}
-
-/* CALENADAR */
-#Calendar-mode {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 85%;
-  padding: 0;
-}
-
-
-#Calendar-mode #user-input {
-  height: 7vh;
-  width: 20vw;
-}
-
+#Dark-mode .calendar .header {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 115%;
+  padding: 1.5em 0;
+  border-bottom: 2px solid #F5F3F1;
+  color: #F5F3F1;
+  }
+#Dark-mode .calendar .header .icon:hover {
+  color: #F5F3F1;
+  }
+#Dark-mode .calendar .days {
+  color: #F5F3F1;
+  }
+#Dark-mode .button {
+  border: 1px solid #F5F3F1;
+  }
 /* FOOTER */
-.footer-container{
-  position: relative;
-  height: 10vh;
- }
  .footer {
-   position: absolute;
+   position: relative;
    bottom: 0;
    width: 100%;
    height: 8vh;
-   display: flex;
-   flex-direction: row-reverse;
-   justify-content: center;
-   color: whitesmoke;
- }
- .footer img {
-   margin-left: 3vw;
+   text-align: center;
+   padding-top: 3vh;
  }
  .completed {
   text-decoration: line-through;
+}
+.clock{
+  margin: 5px 20px;
+  font-weight: bold;
 }

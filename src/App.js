@@ -5,14 +5,12 @@ import ButtonList from './Buttons';
 import { useState, useEffect } from "react";
 import Calendar from './Calendar';
 import Home from './Home';
-import Addtext from './Addtext';
 import DateTime from './datetime';
 import Todolistapp from './todolist/Todolistapp';
 
 
-const apps = ["Dark", "Light", "Custom"];
-const menuButtons = ["Home", "Todolist", "Calendar", "Todolistapp"];
-
+const apps = ["Light", "Dark", "Custom"];
+const menuButtons = ["Home", "Calendar", "Todolistapp"];
 
 function App() {
   const [appTheme, setAppTheme] = useState(apps[0]);
@@ -34,30 +32,23 @@ function App() {
           apps[appTheme]
         }
         <DateTime />
+        <ButtonList buttons={apps} callback={changeAppTheme} />
       </div>
-
-      <header className="app-header">
-        
-      </header>
-      
-      <ButtonList buttons={apps} callback={changeAppTheme} />
       <div className="main-box">
-      <NavBar navName={menuButtons} callback1={changeAppSwitch} />
+        <NavBar navName={menuButtons} callback1={changeAppSwitch} />
       
-      <div className="app-container" id={appSwitch + "-mode"}>
-        {
-          {
-            "Home":   <Home />,
-            Todolist: <Addtext />,
-            Calendar: <Calendar/>,
-            Todolistapp: <Todolistapp/>
-          }[appSwitch]
-        }
+          <div className="app-container" id={appSwitch + "-mode"}>
+            {
+             {
+              "Home":   <Home />,
+              Calendar: <Calendar/>,
+              Todolistapp: <Todolistapp/>
+             }[appSwitch]
+            }
+          </div>
+          
       </div>
-      </div>
-      <footer className="footer-container">
-        <Footer />
-      </footer>
+      <Footer />
     </div >
   );
 }

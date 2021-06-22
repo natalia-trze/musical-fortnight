@@ -5,20 +5,6 @@ const Tasks = ({tasks, onDelete, onToggle, removeCompleted, onEdit}) => {
     return (
         <>
             {tasks
-            
-            .sort((a, b) => {
-                a = parseInt(a.day.split('-').reverse().join('-'));
-                b = parseInt(b.day.split('-').reverse().join('-'));
-                if (a < b) {
-                    return -1;
-                } else if (a > b) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            })
-
-
             .map((task) => 
                 <Task 
                 key={task.id} 
@@ -26,7 +12,6 @@ const Tasks = ({tasks, onDelete, onToggle, removeCompleted, onEdit}) => {
                 onToggle={onToggle} 
                 onDelete={onDelete}
                 onEdit={onEdit}
-                //onToggle={toggleCompleted} 
             />)
             }
 
@@ -47,5 +32,4 @@ export default Tasks
                 } else {
                     return 0;
                 }
-            })*/
-
+            }) */

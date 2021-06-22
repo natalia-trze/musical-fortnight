@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './Navbar.js';
 import Footer from './Footer';
 import ButtonList from './Buttons';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Calendar from './Calendar';
 import Home from './Home';
 import DateTime from './datetime';
@@ -26,30 +26,30 @@ function App() {
   };
 
   return (
-    <div className="app" id={appTheme + "-mode"}>
-      <div className="user-theme" id={appTheme + "-mode"}>
-        {
-          apps[appTheme]
-        }
-        <DateTime />
-        <ButtonList buttons={apps} callback={changeAppTheme} />
-      </div>
-      <div className="main-box">
-        <NavBar navName={menuButtons} callback1={changeAppSwitch} />
-      
+      <div className="app" id={appTheme + "-mode"}>
+        <div className="user-theme" id={appTheme + "-mode"}>
+          {
+            apps[appTheme]
+          }
+          <DateTime />
+          <ButtonList buttons={apps} callback={changeAppTheme} />
+        </div>
+        <div className="main-box">
+          <NavBar navName={menuButtons} callback1={changeAppSwitch} />
+
           <div className="app-container" id={appSwitch + "-mode"}>
             {
-             {
-              "Home":   <Home />,
-              Calendar: <Calendar/>,
-              Todolistapp: <Todolistapp/>
-             }[appSwitch]
+              {
+                "Home": <Home />,
+                Calendar: <Calendar />,
+                Todolistapp: <Todolistapp />
+              }[appSwitch]
             }
           </div>
-          
-      </div>
-      <Footer />
-    </div >
+
+        </div>
+        <Footer />
+      </div >
   );
 }
 

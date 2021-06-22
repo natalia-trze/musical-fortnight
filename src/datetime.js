@@ -12,7 +12,7 @@ export default function DateTime () {
 
     return (
         <div className="clock">
-            <div>{`${dateTime.toLocaleDateString()}`}</div>
+            <p>{`${dateTime.toLocaleDateString()}`}</p>
             <p>{`${dateTime.toLocaleTimeString()}`}</p>
         </div>
     );

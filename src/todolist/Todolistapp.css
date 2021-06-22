@@ -1,48 +1,90 @@
+ 
  .app-todo{
     display:flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content:center;
     text-align: center;
-    width: 50vw;
-    margin-left: 40vh;
-    margin-top: 10vh;
-    color: whitesmoke;  
-    border: 1px solid;
-    /*box-shadow:15px 15px 5px grey;*/
-    background-color: #282c34;
-
+    width: 100%;
+    color: #F5F3F1;
  }
-
  .task{
      display:flex;
      flex-wrap:wrap;
      flex-direction:row;
-     justify-content: space-around;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #836E66;
+     margin-top: 15px;
+     padding: 0 10px 0 10px;
  }
-
- .button{
-    padding: 2px 20px;
-    background-color: rgba(0, 0, 0, 0.283);
-    /*border-color: whitesmoke;*/
-    border-radius: 7px;
-    height: 3vh;
-    width: 4vw;
-    margin-bottom: 1vh;
+ .icons-box {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     width: 60px;
+ }
+ .icons-box input {
+    margin-right: 15px;
+    margin-bottom: 9px;
+}
+ .task p {
+     font-size: 0.8rem;
+ }
+ .task div {
+     font-size: 1.3rem;
+ }
+ .button {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #3C3939;
+    text-align: center;
+    border-radius: 6px;
   }
-
-  .add-task{
-
-    display:flex;
+  .add-task {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-items: center;
-
+    justify-content: center;
   }
-
-  form{
-
-    margin: 15px;
-
-
+  .form input {
+    width: 300px;
+    height: 30px;
+    margin: 30px 20px;
+  }
+  .form-cat select {
+    width: 200px;
+    height: 30px;
+    margin: 30px 20px;
+    color: #836E66;
+  }
+  .form-date input {
+    width: 200px;
+    height: 30px;
+    margin: 30px 20px;
+    color: #836E66;
+  }
+  .form-checkbox {
+      width: 20vw;
+      margin: 30px 20px;
+      color: #836E66;
+  }
+  .form-checkbox input {
+      margin-left: 5px ;
+      height: 20px;
+      width: 20px;
+      color: #836E66;
+  }
+  .button_save {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #3C3939;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .button_completed {
+    margin-top: 15px;
+    padding: 10px 0;
+    border: 1px solid #3C3939;
+    border-radius: 6px;
   }

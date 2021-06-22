@@ -1,5 +1,4 @@
 import { useState } from "react"
-
 const Addtask = ({ onAdd }) => {
 const [text, setText] = useState('')
 const [day, setDay] = useState('')
@@ -21,7 +20,7 @@ const onSubmit = (e) => {
 }
 
     return (
-        <div className="form-containter">
+    <div className="form-containter">
         <form className="add-task" onSubmit={onSubmit}>
             <div className="form">
                 <label>Task</label>
@@ -31,9 +30,9 @@ const onSubmit = (e) => {
             <div className="form-cat">
                 <label>Category</label>
                 <select defaultValue={category} onChange={(e)=> setCategory(e.target.value)}>
-                    <option value="home">HOME</option>
-                    <option value="work">WORK</option>
-                    <option value="random">OTHER</option>
+                    <option value="HOME">HOME</option>
+                    <option value="WORK">WORK</option>
+                    <option value="RANDOM">OTHER</option>
                 </select>
             </div>
 

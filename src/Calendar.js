@@ -39,7 +39,6 @@ const Calendar = () => {
       );
    };
    const days = () => {
-      //const dateFormat = "ddd";
       const dateFormat = "EEE";
       const days = [];
       let startDate = startOfWeek(currentDate);
@@ -62,14 +61,6 @@ const Calendar = () => {
       const rows = [];
       let days = [];
       let day = startDate;
-
-      /*console.log("OYOY day=" + day) 
-      console.log("currentDate=" + currentDate)
-      console.log("monthStart=" + monthStart)
-      console.log("monthEnd=" + monthEnd)
-      console.log("startDate=" + startDate)
-      console.log("endDate=" + endDate)*/
-      //<span className="number">{formattedDate}</span> --taken it from line 92 above spanclassname bg
    
       let formattedDate = "";
       let formattedDate2 = "";
@@ -81,7 +72,6 @@ const Calendar = () => {
 
             const yn = new Date(Date.now()).getFullYear()
             const mn = new Date(Date.now()).getMonth()+1
-            //const ourDate = yn + "-" + mn + "-" + formattedDate
             days.push(
                <div 
                   className={`column cell ${!isSameMonth(day, monthStart)? "disabled" : isSameDay(day, selectedDate) 

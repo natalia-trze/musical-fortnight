@@ -9,7 +9,7 @@ export default function App() {
       .then((res) => res.json())
       .then((res) => setNews(res.hits));
   }, [news]);
-console.log(news)
+
 
 
   return (
@@ -17,7 +17,7 @@ console.log(news)
         <h3> - News from the Netherlands - </h3>
       <ul style={{listStyleType: "square"}}>
         {news.map((story) => (
-          <li>
+          <li key={story.created_at}>
               <a href={story.url} style={{fontWeight: "bold"}}> {story.title}</a>
               <p>{story.created_at}</p>
           </li>

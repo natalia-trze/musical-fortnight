@@ -18,21 +18,10 @@
   align-items: center;
 }
 .Navbar button {
-    width: 100px;
-    height: 35px;
-    font-weight: bold;
-    border: 1px solid #3C3939;
-    text-align: center;
-    border-radius: 6px;
-    margin-right: 5px; 
-    margin-bottom: 60px;
+  margin-right: 5px; 
+  margin-bottom: 60px;
 }
 .button-list button{
-  width: 100px;
-  height: 20px;
-  border: 1px solid #3C3939;
-  text-align: center;
-  border-radius: 6px;
   margin-right: 2px;
 }
 .user-theme {

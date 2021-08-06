@@ -1,4 +1,5 @@
 import Task from "./Task";
+import Button from 'react-bootstrap/Button';
 
 const Tasks = ({tasks, onDelete, onToggle, removeCompleted, onEdit}) => {
     
@@ -15,21 +16,9 @@ const Tasks = ({tasks, onDelete, onToggle, removeCompleted, onEdit}) => {
             />)
             }
 
-<button onClick={removeCompleted} className="button_completed">Remove completed</button>
+<Button variant="dark" onClick={removeCompleted} className="button_completed">Remove completed</Button>
         </>
     )
 }
 
 export default Tasks
-
-/*.sort((a, b) => {
-                a = parseInt(a.day.split('-').reverse().join('-'));
-                b = parseInt(b.day.split('-').reverse().join('-'));
-                if (a < b) {
-                    return -1;
-                } else if (a > b) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            }) */

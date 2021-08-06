@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ListGroup from 'react-bootstrap/Pagination'
 
 export default function App() {
   const [news, setNews] = React.useState([]);
@@ -9,8 +8,6 @@ export default function App() {
       .then((res) => res.json())
       .then((res) => setNews(res.hits));
   }, [news]);
-
-
 
   return (
     <div className="news-box">

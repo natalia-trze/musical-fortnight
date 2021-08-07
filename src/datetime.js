@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Card from 'react-bootstrap/Card';
 
-export default function DateTime () {
+export default function DateTime() {
     const [dateTime, setDateTime] = useState(new Date());
 
     useEffect(() => {
@@ -11,10 +12,11 @@ export default function DateTime () {
     }, []);
 
     return (
-        <div className="clock">
-            <p>{`${dateTime.toLocaleDateString()}`}</p>
-            <p>{`${dateTime.toLocaleTimeString()}`}</p>
-        </div>
+        <Card body className="border-0 m-4">
+            <Card.Title>{`${dateTime.toLocaleTimeString()}`}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{`${dateTime.toLocaleDateString()}`}</Card.Subtitle>
+        </Card>
+
     );
 
 };

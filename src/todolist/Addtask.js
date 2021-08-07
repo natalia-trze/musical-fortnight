@@ -24,7 +24,7 @@ const Addtask = ({ onAdd }) => {
 
     return (
         <div className="form-containter">
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={onSubmit} className="form-box">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control type="text" placeholder="Add task..." value={text} onChange={(e) => setText(e.target.value)} />
                 </Form.Group>
@@ -41,7 +41,7 @@ const Addtask = ({ onAdd }) => {
                     <Form.Control type="date" value={day} onChange={(e) => setDay(e.target.value)} />
                 </Form.Group>
 
-                <Button variant="success" type="submit"> Submit </Button>
+                <Button id="submit-btn" className="mb-3" variant="success" type="submit"> Submit </Button>
             </Form>
         </div>
     )

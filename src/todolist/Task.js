@@ -15,7 +15,7 @@ const Task = ({ task, onDelete, onToggle, onEdit }) => {
                     console.log(event.target.innerText)
                 }}
             style={{fontSize: "20px", fontWeight: "bold"}}>{task.text}</div>
-            <div>
+            <div className="icons">
                 <Form.Check type="checkbox" checked={task.completed} value={task.completed}
                     onChange={() => onToggle(task.id)} style={{ cursor: "pointer" }} />
                 <FaTimes style={{ color: "#BA6D9E", cursor: "pointer" }} onClick={() => onDelete(task.id)} />

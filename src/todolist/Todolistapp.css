@@ -16,4 +16,25 @@
      border-radius: 5px;
      padding: 0 8px;
  }
+ .header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+  }
+  .form-box{
+    display: flex;
+    flex-direction: column;
+  }
+  #submit-btn{
+      width: 10vw;
+      align-self:flex-end;
+  }
+ .icons{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     width: 6vw;
+ }
+
  

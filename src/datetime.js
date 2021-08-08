@@ -12,7 +12,7 @@ export default function DateTime() {
     }, []);
 
     return (
-        <Card body className="border-0 m-4">
+        <Card body id="clock" className="border-0 m-4">
             <Card.Title>{`${dateTime.toLocaleTimeString()}`}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{`${dateTime.toLocaleDateString()}`}</Card.Subtitle>
         </Card>

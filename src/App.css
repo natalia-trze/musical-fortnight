@@ -14,6 +14,7 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
+  height: 10vh;
 }
 .Navbar button {
   margin-right: 5px; 
@@ -40,31 +41,36 @@
   height: 8vh;
   width: 100%;
 }
-#Light-mode {
+#Light-mode, #clock {
   background-color: #F5F3F1;
 }
-#Light-mode .task {
-  background-color: #9C9592;
+#Light-mode .theme-btn{
+  background-color: #d6ccc8;
+}
+#Light-mode .task  {
+  background-color: #d6ccc8;
   border-radius: 5px;
 }
 #Light-mode .app-todo{
   color: #3C3939;
 }
-#Custom-mode {
+#Custom-mode, #Custom-mode #clock {
   background-color: #9C928D;
+  color: #d6ccc8;
 }
 #Custom-mode .news-box, #Custom-mode a, #Custom-mode p {
   color: #3C3939;
 }
-#Custom-mode .task {
-  background-color: #C694A8;
+#Custom-mode .task , #Custom-mode .theme-btn{
+  background-color: #caa8b6;
+  color: #3C3939;
 }
 #Custom-mode .calendar .body .disabled {
-  background-color: #C694A8;
+  background-color: #caa8b6;
 }
-#Dark-mode {
+#Dark-mode , #Dark-mode #clock{
   background-color: #3C3939;
-  color: #9C928D;
+  color: #cabdb6;
 }
 #Dark-mode .calendar .header {
   text-transform: uppercase;
@@ -80,6 +86,9 @@
 #Dark-mode .calendar .days {
   color: #F5F3F1;
   }
+#Dark-mode .task{
+  color: #3C3939;
+}
 #Dark-mode .button {
   border: 1px solid #F5F3F1;
   }

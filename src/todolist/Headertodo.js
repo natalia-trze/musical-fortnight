@@ -1,15 +1,15 @@
-import Button from "./Button"
+import Button from 'react-bootstrap/Button';
 
 const Headertodo = ({title, onAdd, showAdd}) => {
-
+  
     return (
         <div className="header">
           <h1>{title}</h1>
         <Button 
+            id="submit-btn"
             onClick={onAdd} 
-            color={showAdd ? '#BA6D9E' : '#958A93'} 
-            text={showAdd ? 'Close' : 'Add'}
-            />
+            variant={showAdd ? 'danger' : 'dark'} 
+            >{showAdd ? 'Close' : 'Add'}</Button>
         </div>
     )
 }

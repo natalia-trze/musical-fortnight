@@ -5,9 +5,7 @@
 .app {
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
-   width: 100%;
    margin: 0;
    color: #836E66;
 }
@@ -16,63 +14,63 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
+  height: 10vh;
 }
 .Navbar button {
-    width: 100px;
-    height: 35px;
-    font-weight: bold;
-    border: 1px solid #3C3939;
-    text-align: center;
-    border-radius: 6px;
-    margin-right: 5px; 
-    margin-bottom: 60px;
+  margin-right: 5px; 
+  margin-bottom: 60px;
+}
+.button-list{
+  padding-right: 1vw;
 }
 .button-list button{
-  width: 100px;
-  height: 20px;
-  border: 1px solid #3C3939;
-  text-align: center;
-  border-radius: 6px;
   margin-right: 2px;
-}
-.user-theme {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 0 5px 0 5px;
 }
 #Calendar-mode, #Todolistapp-mode, #Home-mode {
   display: flex;
   justify-content: center;
   justify-self: center;
   align-items: center;
-  width: 700px;
+  width: 60vw;
 }
-#Light-mode {
+.user-theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+}
+#Light-mode, #clock {
   background-color: #F5F3F1;
 }
-#Light-mode .task {
-  background-color: #9C9592;
+#Light-mode .theme-btn{
+  background-color: #d6ccc8;
+}
+#Light-mode .task  {
+  background-color: #d6ccc8;
+  border-radius: 5px;
 }
 #Light-mode .app-todo{
   color: #3C3939;
 }
-#Custom-mode {
+#Custom-mode, #Custom-mode #clock {
   background-color: #9C928D;
+  color: #d6ccc8;
 }
 #Custom-mode .news-box, #Custom-mode a, #Custom-mode p {
   color: #3C3939;
 }
-#Custom-mode .task {
-  background-color: #C694A8;
+#Custom-mode .task , #Custom-mode .theme-btn{
+  background-color: #caa8b6;
+  color: #3C3939;
 }
 #Custom-mode .calendar .body .disabled {
-  background-color: #C694A8;
+  background-color: #caa8b6;
 }
-#Dark-mode {
+#Dark-mode , #Dark-mode #clock{
   background-color: #3C3939;
+  color: #cabdb6;
 }
 #Dark-mode .calendar .header {
   text-transform: uppercase;
@@ -88,6 +86,9 @@
 #Dark-mode .calendar .days {
   color: #F5F3F1;
   }
+#Dark-mode .task{
+  color: #3C3939;
+}
 #Dark-mode .button {
   border: 1px solid #F5F3F1;
   }
@@ -102,10 +103,6 @@
  }
  .completed {
   text-decoration: line-through;
-}
-.clock{
-  margin: 5px 20px;
-  font-weight: bold;
 }
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;

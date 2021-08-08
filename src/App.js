@@ -7,7 +7,7 @@ import Calendar from './Calendar';
 import Home from './Home';
 import DateTime from './datetime';
 import Todolistapp from './todolist/Todolistapp';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const apps = ["Light", "Dark", "Custom"];
 const menuButtons = ["Home", "Calendar", "Todolistapp"];
@@ -46,7 +46,6 @@ function App() {
               }[appSwitch]
             }
           </div>
-
         </div>
         <Footer />
       </div >
